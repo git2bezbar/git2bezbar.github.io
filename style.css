@@ -1,0 +1,13 @@
+body{
+    background-color: #a7a7a7;
+}
+.parent{
+    display: grid;
+    grid-template-columns: repeat(9, 40px);
+    grid-template-rows: repeat(9, 40px);
+    grid-gap: 1px;
+}   
+.parent > input{
+    background-color: whitesmoke;
+    border: black 1px solid;
+}
