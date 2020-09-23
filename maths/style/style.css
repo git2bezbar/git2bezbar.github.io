@@ -1,0 +1,79 @@
+body{
+    background-color: rgb(29, 29, 29);
+    margin: 0;
+    padding: 0;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+}
+header{
+    background-color: rgb(53, 52, 52);
+    padding: 20px;
+    text-align: center;
+    text-transform: uppercase;
+    border-bottom: 2px rgb(167, 167, 167) solid;
+    transition: 0.5s;
+}
+header:hover{
+    letter-spacing: 5px;
+}
+main{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.nombre{
+    text-align: center;
+}
+.boutons{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.codage{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+textarea{
+    resize: none;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    background-color: rgb(25, 25, 25);
+    border: rgb(75, 75, 75) 2px solid;
+}
+.texte{
+    color: rgb(238, 138, 72);
+    transition: 0.5s;
+}
+.texte:hover{
+    transform: scale(1.15);
+}
+.resultat{
+    color: rgb(44, 148, 207);
+    transition: 0.5s;
+}
+.resultat:hover{
+    transform: scale(1.15);
+}
+input[type=number]{
+    background-color: rgb(25, 25, 25);
+    border: rgb(75, 75, 75) 2px solid;
+    color: white;
+    font-weight: bold;
+}
+button{
+    background-color: rgb(25, 25, 25);
+    border: rgb(75, 75, 75) 2px solid;
+    color: white;
+    font-weight: bold;
+}
+.reponses > div {
+    margin-bottom: 15px;
+}
+.reppremier > div {
+    margin-bottom: 10px;
+}
+::placeholder{
+    color: rgb(224, 224, 224);
+}
