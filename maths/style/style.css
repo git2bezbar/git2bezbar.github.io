@@ -4,6 +4,13 @@ body{
     padding: 0;
     color: white;
     font-family: 'Roboto', sans-serif;
+    font-size: x-small;
+}
+@media screen and (min-width: 1200px){
+    body
+    {
+        font-size: large;
+    }    
 }
 header{
     background-color: rgb(53, 52, 52);
@@ -41,6 +48,7 @@ textarea{
     border-radius: 5px;
     background-color: rgb(25, 25, 25);
     border: rgb(75, 75, 75) 2px solid;
+    margin-top: 25px;
 }
 .texte{
     color: rgb(238, 138, 72);
@@ -52,6 +60,12 @@ textarea{
 .resultat{
     color: rgb(44, 148, 207);
     transition: 0.5s;
+}
+@media screen and (min-width: 1200px){
+    textarea
+    {
+        width: 75em;
+    }    
 }
 .resultat:hover{
     transform: scale(1.15);
@@ -76,4 +90,8 @@ button{
 }
 ::placeholder{
     color: rgb(224, 224, 224);
+}
+.boutons{
+    display: grid;
+    grid-gap: 5px;
 }
