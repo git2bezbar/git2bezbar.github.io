@@ -1,0 +1,121 @@
+body{
+
+    min-height: 100vh;
+    background-color: rgb(216, 216, 216);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s;
+}
+
+/* Animation au clic */
+.cible{
+    height: 100px;
+    width: 100px;
+    border-radius: 100%;
+    border: solid 2px black;
+    animation: cible 0.3s infinite;
+    display: none;
+    position: fixed;
+}
+
+@keyframes cible {
+    0% {
+        border: solid 5px black;
+        opacity: 0.6;
+
+    }
+    100% {
+        border: solid 2px black;
+        opacity: 0.2;
+
+    }
+}
+
+/* Switch jour/nuit */
+.bouton{
+    height: 50px;
+    width: 100px;
+    border-radius: 25px;
+    background-color: #DA8508;
+    position: relative;
+    border: 2px solid rgb(216, 216, 216);
+    transition: 0.3s;
+}
+.blanc{
+    height: 40px;
+    width: 40px;
+    border-radius: 100%;
+    background-color: rgb(241, 241, 241);
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    transition: 0.2s ease-in-out;
+}
+.blanc_bouge{
+    transform: translateX(120%);
+}
+.nuit{
+    background-color: rgb(20, 20, 44);
+}
+.fond_nuit{
+    background: rgb(2,0,36);
+}
+
+/* Paysage */
+
+.paysage{
+    height: 500px;
+    width: 500px;
+    border-radius: 100%;
+    border: 5px solid grey;
+    margin-top: 50px;
+    overflow: hidden;
+    position: relative;
+    background: linear-gradient(to bottom, #BE4405, #F6C60C);
+}
+.paysage_nuit{
+    background: linear-gradient(to bottom, #111936, #285A7B);
+    box-shadow: 0px 0px 250px -115px #FFFFFF;
+}
+.celeste{
+    height: 1000px;
+    width: 1000px;
+    position: relative;
+    transition: 0.3s;
+}
+.soleil{
+    height: 150px;
+    width: 150px;
+    border-radius: 100%;
+    position: absolute;
+    top: 275px;
+    left: 175px;
+    background: #F2EF88;
+    box-shadow: 0 0 20px rgba(242, 239, 136, 0.4);
+}
+.lune{
+    height: 150px;
+    width: 150px;
+    border-radius: 100%;
+    position: absolute;
+    top: 75px;
+    left: 500px;
+    background: #e9e9e9;
+    box-shadow: 0 0 20px rgba(204, 204, 196, 0.4);
+}
+.mvt{
+    transform: rotate(-35deg);
+}
+.mer{
+    height: 150px;
+    width: 600px;
+    background: repeating-radial-gradient(ellipse farthest-corner at center -400%, #f5c30e 30%, #518eac 90%) repeat scroll 0 0 #518eac;
+    position: absolute;
+    top: 75%;
+    left: -10%;
+}
+.mer_nuit{
+    background: repeating-radial-gradient(ellipse farthest-corner at center -400%, #7fa1bb 30%, #1d425a 90%) repeat scroll 0 0 #1d425a;
+}

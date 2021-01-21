@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@200;500;900&display=swap" rel="stylesheet">
+    <title>Produit matriciel | Adem Duran</title>
+</head>
+
+<body>
+
+    <header>
+
+        <div class="sous_menu">
+
+            <h1>
+                Produit matriciel
+            </h1>
+            <h1>
+                Maths pour le web
+            </h1>
+            <svg onclick="Menu()" xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 24 24"
+                fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M6 9l6 6 6-6" />
+            </svg>
+        </div>
+
+        <h2>
+            Outils mathématiques matriciels
+        </h2>
+
+        <div class="menu">
+            <h4 onclick="Menu()">
+                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none"
+                    stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="3" y1="12" x2="21" y2="12"></line>
+                    <line x1="3" y1="6" x2="21" y2="6"></line>
+                    <line x1="3" y1="18" x2="21" y2="18"></line>
+                </svg>
+            </h4>
+
+        </div>
+    </header>
+
+    <h1>Calculez un produit matriciel</h1>
+    <p>Choisissez la dimension (entre 1 et 10) de vos deux matrices puis remplissez les.</p>
+
+    <div class="generer">
+        <div class="dimensions">
+            <fieldset>
+                <legend><b>Matrice A</b></legend>
+                <p>Nombre de ligne(s) :</p>
+                <input type="number" name="ligne1" class="ligne1" value="2" min="1" max="10">
+                <p>Nombre de colonne(s) :</p>
+                <input type="number" name="colonne1" class="colonne1" value="2" min="1" max="10">
+            </fieldset>
+            <fieldset class="matrice2">
+                <legend><b>Matrice B</b></legend>
+                <p>Nombre de ligne(s) :</p>
+                <input type="number" name="ligne2" class="ligne2" value="2" min="1" max="10">
+                <p>Nombre de colonne(s) :</p>
+                <input type="number" name="colonne2" class="colonne2" value="2" min="1" max="10">
+            </fieldset>
+        </div>
+        <button onclick="Effacer()">Effacer</button>
+        <button onclick="Generer()">Générer</button>
+    </div>
+    <div class="message">
+    </div>
+
+    <div class="calcul">
+        <div class="matrices dimensions">
+            <div class="matrices dimensions">
+                <fieldset class="matricea">
+                    <legend><b>Matrice A</b></legend>
+                </fieldset>
+                <fieldset class="matriceb">
+                    <legend><b>Matrice B</b></legend>
+                </fieldset>
+            </div>
+            <div class="egal">
+                <h1>=</h1>
+            </div>
+            <div class="resultat dimensions">
+                <fieldset class="matricec">
+                    <legend><b>Matrice C</b></legend>
+                </fieldset>
+            </div>
+        </div>
+
+        <button onclick="Remplir()">Remplir le reste avec des 0</button>
+        <button onclick="Calculer()">Calculer</button>
+    </div>
+
+    <footer>
+        <p>« Retenez bien. Ligne fois colonne : LiCo, LiCo, LiCo. » Christian Ponton - 2018</p>
+    </footer>
+
+
+
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>

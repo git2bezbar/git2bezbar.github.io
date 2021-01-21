@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style/style.css">
+    <title>CALCULATRICE</title>
+</head>
+
+<body onload="Reset()">
+    <div class="calculatrice">
+
+        <input type="text" id="resultat">
+
+        <div class="flex">
+
+            <div class="parent">
+
+                <input type="button" value="CE" onclick="Reset()">
+                <input type="button" value="C" onclick="Supprimer()">
+                <input type="button" value="%" onclick="Afficher(this)">
+                <input type="button" value="+" onclick="Afficher(this)">
+                <input type="button" value="7" onclick="Afficher(this)">
+                <input type="button" value="8" onclick="Afficher(this)">
+                <input type="button" value="9" onclick="Afficher(this)">
+                <input type="button" value="-" onclick="Afficher(this)">
+                <input type="button" value="4" onclick="Afficher(this)">
+                <input type="button" value="5" onclick="Afficher(this)">
+                <input type="button" value="6" onclick="Afficher(this)">
+                <input type="button" value="*" onclick="Afficher(this)">
+                <input type="button" value="1" onclick="Afficher(this)">
+                <input type="button" value="2" onclick="Afficher(this)">
+                <input type="button" value="3" onclick="Afficher(this)">
+                <input type="button" value="/" onclick="Afficher(this)">
+                <input type="button" value="0" onclick="Afficher(this)">
+                <input type="button" value="+-" onclick="Opposer()">
+                <input type="button" value="," onclick="Virgule()">
+                <input type="button" value="=" onclick="Egal()">
+                <input type="button" value="x²" onclick="Carre()">
+                <input type="button" value="x!" onclick="Factoriel()">
+                <input type="button" value="nb_syracuse" onclick="Nbr()">
+                <input type="button" value="mx_syracuse" onclick="Max()">
+
+            </div>
+        </div>
+
+    </div>
+
+</body>
+<script src="js/script.js"></script>
+
+</html>

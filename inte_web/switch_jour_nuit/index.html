@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Jour | Nuit</title>
+</head>
+
+<body onclick="Cible()">
+
+    <!-- <div class="cible"></div> -->
+
+    <div class="bouton" onclick="Nuit()">
+        <div class="blanc"></div>
+    </div>
+
+    <div class="paysage">
+        <div class="celeste">
+            <div class="soleil"></div>
+            <div class="lune"></div>
+        </div>
+        <div class="mer"></div>
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+    <script>
+
+        /* function Cible() {
+
+            var cible = document.querySelector(".cible");
+
+            var coor_x = event.pageX;
+            var coor_y = event.pageY;
+
+            coor_x = coor_x - 50 + "px";
+            coor_y = coor_y - 50 + "px";
+
+            console.log(coor_x + " " + coor_y);
+
+            cible.style.display = "block";
+            cible.style.top = coor_y;
+            cible.style.left = coor_x;
+
+        } */
+
+        function Nuit() {
+
+            // Changement de couleur page et bouton
+            var bouton = document.querySelector(".bouton");
+            bouton.classList.toggle("nuit");
+            document.body.classList.toggle("fond_nuit");
+
+            // Animation du bouton
+            var blanc = document.querySelector(".blanc");
+            blanc.classList.toggle("blanc_bouge");
+
+            // Animation du ciel
+            document.querySelector(".paysage").classList.toggle("paysage_nuit");
+
+            // Animation de la mer
+            document.querySelector(".mer").classList.toggle("mer_nuit");
+
+            // Animation du soleil
+            document.querySelector(".celeste").classList.toggle("mvt");
+
+        }
+
+    </script>
+
+</body>
+
+</html>

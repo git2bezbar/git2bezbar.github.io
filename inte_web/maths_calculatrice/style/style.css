@@ -1,0 +1,35 @@
+body{
+    background-color: #272727;
+}
+.flex{
+    display: flex;
+    justify-content: center;
+
+}
+.calculatrice{
+    display: block;
+    text-align: center;
+    background-color: #a7a7a7;
+    height: 425px;
+    margin-left: 300px;
+    margin-right: 300px;
+    border-radius: 10px;
+
+}
+.parent{
+    display: grid;
+    grid-template-columns: repeat(4, 150px);
+    grid-template-rows: repeat(6, 50px);
+    grid-gap: 10px;
+
+    margin: 25px;
+}   
+.parent > input{
+    border-radius: 10px;
+    text-align: center;
+    font-size: large;
+}
+#resultat{
+    margin-top: 20px;
+    width: 600px;
+}

@@ -1,0 +1,226 @@
+html{
+    scroll-behavior: smooth;
+}
+body{
+    margin: 0;
+    background-color: rgb(15, 15, 15);
+    color: white;
+    font-family: 'Exo 2', sans-serif;
+    
+    position: relative;
+}
+
+/* Header */
+header{
+    display: flex;
+    align-items: center;
+    border-bottom: 5px solid rgb(200, 0, 0);
+    background-color: rgb(15, 15, 15);
+    min-height: 10vh;
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 15;
+}
+header > :nth-child(n):hover {
+    color: rgb(200, 0, 0);
+    transition: 0.3s;
+}
+header > img{
+    height: auto;
+    width: 3%;
+    margin: 15px;
+}
+header > img:hover{
+    transform: scale(0.8);
+}
+header > h2{
+    margin: 15px;
+    transition: 0.3s;
+}
+header > h3{
+    margin-left: auto;
+    margin-right: 15px;
+    transition: 0.3s;
+}
+
+/* Première partie du site */
+
+.un{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 90vh;
+    position: relative;
+    overflow: hidden;
+}
+.fond {
+    position: absolute;
+    z-index: -1;
+    opacity: 0.15;
+    height: auto;
+    width: 100%;
+    transition: 1s;
+}
+.un > h1 {
+    transition: 0.3s;
+}
+.un > h1:hover {
+    letter-spacing: 5px;
+}
+.ancre {
+    position: absolute;
+    bottom: 10%;
+    left: 45%;
+    transition: 0.3s;
+}
+svg:hover {
+    transform: translateY(20px);
+    opacity: 0.5;
+}
+
+/* Deuxième partie du site : les dernières nouvelles */
+
+.deux{
+    min-height: 100vh;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: " art1 art4 art3 art3" "art1 art2 art2 art5";
+    grid-gap: 25px;
+    margin: 50px;
+    max-height: 75vh;
+}
+
+/* Définition du grid pour les balises <article> */
+
+.grid > :nth-child(1)
+{
+    grid-area: art1;
+}
+.grid > :nth-child(2)
+{
+    grid-area: art2;
+}
+.grid > :nth-child(3)
+{
+    grid-area: art3;
+}
+.grid > :nth-child(4)
+{
+    grid-area: art4;
+}
+.grid > :nth-child(5)
+{
+    grid-area: art5;
+}
+
+/* Définition des propriétés des balises <article> */
+
+.grid > :nth-child(n)
+{
+    overflow: hidden;
+    position: relative;
+    transition: 0.3s;
+}
+article > img {
+    width: 125%;
+    height: auto;
+}
+.grid > :nth-child(1) > img {
+    width: 150% !important;
+    transform: translateX(-27.5%);
+}
+.grid > :nth-child(4) > img {
+    width: 150% !important;
+    transform: translateX(-15%) translateY(-5%);
+}
+.grid > :nth-child(5) > img {
+    /* width: 150% !important; */
+    transform: translateX(-10%) /* translateY(-5%) */;
+}
+.grid > :nth-child(3) > img {
+    width: 110% !important;
+    transform: translateX(-7.5%) /* translateY(-5%) */;
+}
+.grid > :nth-child(2) > img {
+    width: 110% !important;
+    transform: translateX(-10%) translateY(-15%);
+}
+.grid > :nth-child(1) > .rectangle {
+    top : 90%;
+}
+article > h3 {
+    position: absolute;
+    bottom: 5px;
+    left: 8px;
+    color: black;
+}
+.rectangle{
+    background: white;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 80%;
+}
+/* Bouton retour en haut */
+
+.bouton{
+    position: sticky;
+    bottom: 2px;
+    right: 2px;
+    height: 50px;
+    width: 50px;
+
+}
+.bouton > a > svg {
+    height: 100%;
+    width: auto;
+    transform: rotate(180deg);
+    transition: 0.3s;
+}
+.bouton > a > svg:hover {
+    transform: rotate(180deg) translateY(5px);
+}
+
+/* Animation */
+
+.grid > :nth-child(n) > div,.grid > :nth-child(n) > h3 {
+    opacity: 0;
+    transition: 0.3s;
+}
+.grid > :nth-child(n):hover > div,.grid > :nth-child(n):hover > h3 {
+    opacity: 1;
+    transition: 0.3s;
+}
+.grid > :nth-child(n):hover{
+    transform: scale(0.95);
+    transition: 0.3s;
+}
+
+header *, h1, article{
+    animation: apparition 0.5s ease-in-out;
+}
+
+
+@keyframes apparition {
+    0%{
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0%);
+        opacity: 1;
+    }
+}
