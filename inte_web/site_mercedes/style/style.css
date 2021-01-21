@@ -1,0 +1,80 @@
+body {
+    margin: 0;
+    background-color: black;
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+}
+header {
+    border-bottom: 1px grey solid;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+}
+header > img {
+    height: 70px;
+    width: auto;
+    margin-left: 12vw;
+}
+header > h2 {
+    margin-left: 50px;
+    font-weight: 300;
+}
+header > svg {
+    margin-left: auto;
+    margin-right: 20px;
+}
+ul {
+    display: flex;
+    justify-content: space-around;
+    list-style-type: none;
+    color: grey;
+}
+ul > li {
+    transition: 0.4s;
+}
+ul > li:hover {
+    color: white;
+}
+h1, h2 {
+    font-weight: 300;
+}
+main {
+    margin-top: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 83.42vh;
+    background-image: linear-gradient( rgba(0, 0, 0, 0.85),  rgba(0, 0, 0, 0.90)), url("../img/a35.webp");
+    background-size: cover;
+    background-position: center;
+}
+.titre {
+    border-right: 1px white solid;
+    padding-right: 5px;
+    animation: clignotement 0.5s infinite;
+}
+@keyframes clignotement {
+    0% {
+        border-right: 1px white solid;
+    }
+    100% {
+        border-right: 1px transparent solid;
+    }
+}
+.rs {
+    font-size: 80%;
+    padding: 10px;
+    text-align: center;
+    border-top: 1px grey solid;
+}
+footer {
+    border-top: 1px grey solid;
+    padding: 25px;
+}
+.bas{
+    justify-content: center !important;
+}
+.bas > li
+{
+    padding: 5px ;
+}
