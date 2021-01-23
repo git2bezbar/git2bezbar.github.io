@@ -101,6 +101,7 @@ header > :nth-child(2) > :nth-child(n) {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    transition: 0.3s;
 }
 .jsmenu > ul {
     flex-direction: column;
@@ -113,9 +114,14 @@ header > :nth-child(2) > :nth-child(n) {
     font-size: 8vw;
     padding: 25px;
 }
+.jsmenu svg {
+    transition: 0.3s;
+}
 .jsmenu svg:hover {
     transform: translateY(25px);
-    transition: 0.3s;
+}
+.jshide {
+    transform: translateY(100%);
 }
 
 /* Définition du style des balises articles qui serviront dans la première et troisième partie du site */
