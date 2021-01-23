@@ -45,14 +45,14 @@
                     <li class="mobilehide">Nos Cookies</li>
                     <li class="mobilehide">ArtCoffee</li>
                 </ul>
-                <img class="computerhide" src="img/menu.svg" alt="menu">
+                <img onclick="Menu()" class="computerhide" src="img/menu.svg" alt="menu">
             </nav>
 
-            <nav class="jsmenu">
+            <nav class="jsmenu jshide">
                 <ul>
-                    <li>Nos Cafés</li>
-                    <li>Nos Cookies</li>
-                    <li>ArtCoffee</li>
+                    <li> <a href="#nos_cafes" onclick="Menu()">Nos Cafés</a></li>
+                    <li> <a href="#nos_cookies" onclick="Menu()">Nos Cookies</a></li>
+                    <li> <a href="#art_coffee" onclick="Menu()">ArtCoffee</a></li>
                     <li><svg onclick="Menu()" xmlns="http://www.w3.org/2000/svg" width="59" height="59"
                             viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round"
                             stroke-linejoin="round">
@@ -71,7 +71,7 @@
                     <h2>Un café fraichement torréfié</h2>
                 </article>
                 <article>
-                    <img src="img/nos_cafes.png" alt="">
+                    <img id="nos_cafes" src="img/nos_cafes.png" alt="">
                     <h2 class="decale">Nos Cafés</h2>
                 </article>
             </div>
@@ -97,7 +97,11 @@
                     d’enchantement pour leur histoire.
                 </p>
                 <p>Les quantités sont cependant très réduites.</p>
-                <button>Découvrez</button>
+                <button>
+                    <div class="wave"></div>
+                    <p>Découvrez</p>
+
+                </button>
             </div>
 
 
@@ -107,11 +111,11 @@
 
         <div class="trois">
             <article>
-                <img src="img/art.png" alt="">
+                <img id="art_coffee" src="img/art.png" alt="">
                 <h2>L’Art du Café</h2>
             </article>
             <article>
-                <img src="img/cookies.png" alt="">
+                <img id="nos_cookies" src="img/cookies.png" alt="">
                 <h2>Des Cookies croquants !</h2>
             </article>
             <article>

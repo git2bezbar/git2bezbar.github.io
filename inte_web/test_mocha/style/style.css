@@ -1,3 +1,6 @@
+html {
+    scroll-behavior: smooth;
+}
 body {
     margin: 0;
     background-color: white;
@@ -123,6 +126,13 @@ header > :nth-child(2) > :nth-child(n) {
 .jshide {
     transform: translateY(100%);
 }
+a {
+    color: white;
+    text-decoration: none;
+}
+a:active {
+    color: white;
+}
 
 /* Définition du style des balises articles qui serviront dans la première et troisième partie du site */
 
@@ -184,7 +194,46 @@ button {
     font-size: 6vw;
     font-weight: 900;
     font-family: 'Roboto Slab', serif;
+    position: relative;
+    overflow: hidden;
 }
+button:hover > .wave {
+    background-color: #553019;
+}
+button > p {
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+}
+.wave {
+    width: 70vw;
+    height: 70vw;
+    border-radius: 30%;
+    background-color: #aa7b51;
+    position: absolute;
+    top: 40%;
+    left: -20%;
+    animation: wave 10s linear infinite;
+    transition: 0.3s;
+}
+@keyframes wave {
+    0% {
+        transform: rotate(0deg);
+    }
+    25% {
+        border-radius: 40%;
+    }
+    50% {
+        border-radius: 45%;
+    }
+    75% {
+        border-radius: 35%;
+    }
+    100%
+    {
+        transform: rotate(360deg);
+    }
+}
+
 
 /* Footer et contenu */
 
@@ -231,6 +280,21 @@ footer > ul > li {
     display: none;
 }
 
+/* Animations */
+
+li {
+    transition: 0.3s;
+}
+li:hover {
+    color: #553019;
+}
+
+img {
+    transition: 0.3s;
+}
+.prem_cafe img:hover, .trois img:hover{
+    filter: contrast(120%);
+}
 /* Version ordinateur */
 
 @media screen and (min-width : 800px)
