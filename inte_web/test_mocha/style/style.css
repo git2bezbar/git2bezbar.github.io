@@ -56,6 +56,7 @@ header > :nth-child(2) > :nth-child(n) {
 /* // Main // */
 
 /* Première partie */
+
 .logo {
     display: flex;
     justify-content: center;
@@ -177,14 +178,14 @@ hr {
     color: #aa7b51;
     max-height: 45px;
 }
-.deux > .texte > p {
+.texte > p {
     font-size: 3.85vw;
     padding: 0px 20px;
     margin-block-start: 0em;
     margin-block-end: 0em;
     font-family: 'Open Sans', sans-serif;
 }
-.deux > .texte > p:first-of-type {
+.texte > p:first-of-type {
     margin-block-start: 3.5em;
     margin-block-end: 1em;
 }
@@ -264,7 +265,7 @@ header h6:hover, header img:hover {
     opacity: 0.5;
 }
 
-li, a, header h6, header img, button, button p {
+li, a, header h6, button, button p, img {
     transition: 0.3s;
 }
 button, button img {
@@ -272,10 +273,6 @@ button, button img {
 }
 li:hover, a:hover {
     color: #553019;
-}
-
-img {
-    transition: 0.3s;
 }
 .prem_cafe img:hover, .trois img:hover{
     filter: contrast(120%);
@@ -309,7 +306,6 @@ button:hover img {
         font-size: 0.7vw!important;
     }
     header h6 {
-        /* font-size: 0.85em!important; */
         margin-block-start: 0em;
         margin-block-end: 0em;
     }
