@@ -5,10 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style/style.css">
+    <link rel="icon" href="img/icon.png" />
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+
     <title>Mocha Café | Entrez dans un monde de saveurs</title>
 </head>
 
@@ -40,19 +42,24 @@
 
             <nav class="menu">
                 <ul>
-                    <li>Menu</li>
-                    <li class="mobilehide">Nos Cafés</li>
-                    <li class="mobilehide">Nos Cookies</li>
-                    <li class="mobilehide">ArtCoffee</li>
+                    <li onclick="Menu()">Menu</li>
+                    <li class="mobilehide"><a href="#nos_cafes">Nos Cafés</a></li>
+                    <li class="mobilehide"><a href="#nos_cookies">Nos Cookies</a></li>
+                    <li class="mobilehide"><a href="#art_coffee">ArtCoffee</a></li>
                 </ul>
                 <img onclick="Menu()" class="computerhide" src="img/menu.svg" alt="menu">
             </nav>
 
             <nav class="jsmenu jshide">
                 <ul>
-                    <li> <a href="#nos_cafes" onclick="Menu()">Nos Cafés</a></li>
-                    <li> <a href="#nos_cookies" onclick="Menu()">Nos Cookies</a></li>
-                    <li> <a href="#art_coffee" onclick="Menu()">ArtCoffee</a></li>
+                    <li class="computerhide"><a href="#nos_cafes" onclick="Menu()">Nos Cafés</a></li>
+                    <li class="computerhide"><a href="#nos_cookies" onclick="Menu()">Nos Cookies</a></li>
+                    <li class="computerhide"><a href="#art_coffee" onclick="Menu()">ArtCoffee</a></li>
+                    <li><a onclick="Menu()">Mon compte</a></li>
+                    <li><a onclick="Menu()">Mon panier</a></li>
+                    <li><a onclick="Menu()">Votre café personnalisé</a></li>
+                    <li><a onclick="Menu()">Les réduc' Mocha</a></li>
+                    <li><a onclick="Menu()">Contact</a></li>
                     <li><svg onclick="Menu()" xmlns="http://www.w3.org/2000/svg" width="59" height="59"
                             viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round"
                             stroke-linejoin="round">
@@ -98,7 +105,7 @@
                 </p>
                 <p>Les quantités sont cependant très réduites.</p>
                 <button>
-                    <div class="wave"></div>
+                    <img src="img/picto.svg" alt="logo café">
                     <p>Découvrez</p>
 
                 </button>
@@ -129,10 +136,10 @@
 
     <footer>
         <ul class="footermenu">
-            <li>Menu</li>
-            <li>Nos Cafés</li>
-            <li>Nos Cookies</li>
-            <li>ArtCoffee</li>
+            <li onclick="Menu()">Menu</li>
+            <li><a href="#nos_cafes">Nos Cafés</a></li>
+            <li><a href="#nos_cookies">Nos Cookies</a></li>
+            <li><a href="#art_coffee">ArtCoffee</a></li>
         </ul>
         <ul class="footermenu2">
             <li>Mentions légales</li>

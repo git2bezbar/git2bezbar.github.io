@@ -104,7 +104,9 @@ header > :nth-child(2) > :nth-child(n) {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    text-align: center;
     transition: 0.3s;
+    z-index: 99;
 }
 .jsmenu > ul {
     flex-direction: column;
@@ -114,14 +116,15 @@ header > :nth-child(2) > :nth-child(n) {
     margin-block-end: 0em;
 }
 .jsmenu > ul > li {
-    font-size: 8vw;
-    padding: 25px;
+    font-size: 6vw;
+    padding: 10px;
 }
 .jsmenu svg {
     transition: 0.3s;
 }
 .jsmenu svg:hover {
     transform: translateY(25px);
+    stroke: #553019;
 }
 .jshide {
     transform: translateY(100%);
@@ -165,7 +168,7 @@ hr {
 }
 .exception > :nth-child(1) {
     font-size: 11.5vw;
-    margin-block-end: 0em;
+    margin-block-end: 0vh;
     max-height: 45px;
 }
 .exception > :nth-child(2) {
@@ -197,14 +200,14 @@ button {
     position: relative;
     overflow: hidden;
 }
-button:hover > .wave {
+/* button:hover > .wave {
     background-color: #553019;
-}
+} */
 button > p {
     margin-block-start: 0em;
     margin-block-end: 0em;
 }
-.wave {
+/* .wave {
     width: 70vw;
     height: 70vw;
     border-radius: 30%;
@@ -214,8 +217,8 @@ button > p {
     left: -20%;
     animation: wave 10s linear infinite;
     transition: 0.3s;
-}
-@keyframes wave {
+} */
+/* @keyframes wave {
     0% {
         transform: rotate(0deg);
     }
@@ -232,6 +235,15 @@ button > p {
     {
         transform: rotate(360deg);
     }
+} */
+
+button img {
+    width: 20%;
+    height: auto;
+    position: absolute;
+    right: 40%;
+    top: 10%;
+    opacity: 0;
 }
 
 
@@ -282,10 +294,17 @@ footer > ul > li {
 
 /* Animations */
 
-li {
+header h6:hover, header img:hover {
+    opacity: 0.5;
+}
+
+li, a, header h6, header img, button, button p {
     transition: 0.3s;
 }
-li:hover {
+button, button img {
+    transition: 0.4s;
+}
+li:hover, a:hover {
     color: #553019;
 }
 
@@ -294,7 +313,18 @@ img {
 }
 .prem_cafe img:hover, .trois img:hover{
     filter: contrast(120%);
+    transform: scale(1.05);
 }
+button:hover {
+    background-color: #553019;
+}
+button:hover p {
+    opacity: 0;
+}
+button:hover img {
+    opacity: 1;
+}
+
 /* Version ordinateur */
 
 @media screen and (min-width : 800px)
@@ -438,4 +468,14 @@ img {
     font-size: 0.85vw;
     margin: 25px 30px;
    }
+   .jsmenu > ul > li {
+    font-size: 3vw;
+    padding: 25px;
+    }
+    .wave {
+        width: 15vw;
+        height: 15vw;
+        top: 60%;
+        left: -40%;
+    }
 }
