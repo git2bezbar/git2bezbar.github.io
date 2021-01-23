@@ -1,0 +1,343 @@
+body {
+    margin: 0;
+    background-color: white;
+    font-family: 'Roboto Slab', serif;
+}
+/* Header et contenu du header */
+header {
+    background-color: #aa7b51;
+    color: white;
+}
+header > nav {
+    display: flex;
+    align-items: end;
+}
+header > nav > h6 {
+    padding: 0px 12.5px;
+    margin-block-start: 0.75em;
+    margin-block-end: 0.75em;
+}
+.customer * {
+    font-size: 3.5vw;
+    font-weight: 400;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+}
+.croix {
+    padding: 5px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 5vw;
+}
+.rdv > h6 {
+    font-size: 3.25vw;
+}
+header > :nth-child(2) {
+    background-color: #553019;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+header > :nth-child(2) > :nth-child(n) {
+    margin: 0px 5px;
+}
+.panier {
+    display: flex;
+    align-items: center;
+}
+.panier > img {
+    height: 3vh;
+    width: auto;
+    margin-right: 8px;
+}
+
+/* // Main // */
+
+/* Première partie */
+.logo {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
+.logo > img, article > img {
+    height: auto;
+    width: 90%;
+}
+.menu {
+    background-color: #aa7b51;
+    color: white;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.menu > img {
+    height: 25px;
+    width: auto;
+    position: absolute;
+    top: 28%;
+    right: 5%;
+}
+.menu > ul {
+    list-style-type: none;
+    display: flex;
+    padding-inline-start: 0px;
+}
+.menu li {
+    margin: 0px 30px;
+    font-size: 5vw;
+}
+.menu > h4 {
+    font-weight: 400;
+}
+
+/* Définition du style des balises articles qui serviront dans la première et troisième partie du site */
+
+article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 35px 10px;
+}
+article > h2 {
+    margin-block-start: 0.75em;
+    margin-block-end: 1.25em;
+    font-size: 4.5vw;
+}
+.decale {
+    margin-right: 20px;
+}
+hr {
+    width: 90vw;
+    background-color: rgba(128, 128, 128, 0.20);
+    border: none;
+    height: 0.1px;
+}
+
+/* Deuxième partie */
+
+.deux {
+    text-align: center;
+}
+.exception > :nth-child(1) {
+    font-size: 11.5vw;
+    margin-block-end: 0em;
+    max-height: 45px;
+}
+.exception > :nth-child(2) {
+    font-size: 14vw;
+    margin-block-start: 0em;
+    color: #aa7b51;
+    max-height: 45px;
+}
+.deux > .texte > p {
+    font-size: 3.85vw;
+    padding: 0px 20px;
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+    font-family: 'Open Sans', sans-serif;
+}
+.deux > .texte > p:first-of-type {
+    margin-block-start: 3.5em;
+    margin-block-end: 1em;
+}
+button {
+    margin: 35px 12px;
+    padding: 7.5px 30px;
+    border: none;
+    background-color: #aa7b51;
+    color: white;
+    font-size: 6vw;
+    font-weight: 900;
+    font-family: 'Roboto Slab', serif;
+}
+
+/* Footer et contenu */
+
+footer {
+    background-color: #aa7b51;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+footer > ul {
+    list-style-type: none;
+    text-align: center;
+    padding-inline-start: 0;
+}
+.footermenu {
+    margin-block-start: 1.5em;
+    margin-block-end: 0em;
+}
+.footermenu > :nth-child(4) {
+    padding-bottom: 0px;
+}
+.footermenu2 {
+    margin-block-start: 0em;
+    margin-block-end: 1.5em;
+}
+.footermenu2 > :nth-child(1) {
+    padding-top: 0px;
+}
+.footermenu2 > * {
+    font-size: 3.5vw;
+    font-weight: 400; 
+}
+footer > ul > li {
+    margin: 10px;
+    padding: 5px;
+    font-size: 5vw;
+}
+
+/* Les éléments cachés de la version mobile */
+
+.mobilehide {
+    display: none;
+}
+
+/* Version ordinateur */
+
+@media screen and (min-width : 800px)
+{
+    body {
+        background-color: #c7b299;
+    }
+    header {
+        display: flex;
+        background-color: #553019;
+        align-items: center;
+        justify-content: space-evenly;
+        
+    }
+    header * {
+        font-size: 0.7vw!important;
+    }
+    header h6 {
+        /* font-size: 0.85em!important; */
+        margin-block-start: 0em;
+        margin-block-end: 0em;
+    }
+    .customer * {
+        margin-block-start: 0em;
+        margin-block-end: 0em;
+    }
+    .panier > img {
+        height: 3vh;
+    }
+    .rdv > h6 {
+        margin-block-start: 1em;
+        margin-block-end: 1em;
+    }
+    main {
+        background-color: white;
+        width: 66vw;
+        margin-left: 17vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .prem_cafe {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 25px 10px 0px 10px;
+    }
+    .prem_cafe > article {
+        width: 50%;
+        margin: 35px 10px 0px 10px;
+    }
+    .prem_cafe > article > img {
+        width: 95%;
+        height: auto;
+    }
+    .logo > img {
+        width: auto;
+        height: 25vh;
+        margin: 10px;
+    }
+    .deux {
+        display: flex;
+        align-items: center;
+    }
+    .deux > :nth-child(n) {
+        width: 50%;
+    }
+    .exception > * {
+        width: 100%;
+    }
+    .mobilehide {
+        display: flex;
+    }
+    .computerhide {
+        display: none;
+    }
+    article > h2 {
+        margin-block-start: 0.25em;
+        margin-block-end: 0em;
+        font-size: 1.5vw;
+    }
+    hr {
+        width: 61vw; 
+    }
+    .texte > p:first-of-type, .texte > p  {
+        font-size: 0.85vw!important;
+        padding: 0px 20px 0px 12px!important;
+        margin-block-start: 1em!important;
+        margin-block-end: 0em!important;
+    }
+    .texte {
+        text-align: left;
+    }
+    .texte > p:nth-of-type(3) {
+        margin-block-start: 0em!important;
+    }
+    button {
+        margin: 25px 12px;
+        padding: 4.5px 20px;
+        font-size: 1.15vw;
+    }
+    .exception > :nth-child(1) {
+        font-size: 3.5vw;
+        margin-block-start: 0em;
+    }
+    .exception > :nth-child(2) {
+        font-size: 4.25vw;
+        margin-block-start: 0.25em;
+        margin-block-end: 1.1em;
+    }
+    .trois {
+        display: flex;
+    }
+    .trois > article {
+        width: 33%;
+        margin: 20px 10px 35px 10px;
+
+    }
+    .trois > article > h2 {
+        margin-block-start: 0.75em;
+        font-size: 1.15vw;
+    }
+    .menu > ul {
+        padding-inline-end: 45px;
+    }
+    .menu li {
+        font-size: 1.25vw;
+    }
+    footer > ul {
+        display: flex;
+    }
+    .footermenu > li {
+        padding: 0px 15px;
+        margin-right: 50px;
+        font-size: 1.25vw;
+    }
+   .footermenu2 {
+        align-items: baseline;
+   }
+   .footermenu2 > li {
+    font-size: 0.85vw;
+    margin: 25px 30px;
+   }
+}
