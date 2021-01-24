@@ -1,0 +1,491 @@
+/* Importation des polices */
+
+@font-face {
+    font-family: 'Open Sans';
+    src: url("../fonts/open_sans/OpenSans-Regular.ttf") format("truetype");
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Roboto Slab';
+    src: url("../fonts/roboto_slab/RobotoSlab-Regular.ttf") format("truetype");
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Roboto Slab';
+    src: url("../fonts/roboto_slab/RobotoSlab-Bold.ttf") format("truetype");
+    font-display: swap;
+    font-weight: bold;
+    font-style: normal;
+}
+
+/* Initialisation du document et du body */
+
+html {
+    scroll-behavior: smooth;
+}
+body {
+    margin: 0;
+    background-color: white;
+    font-family: 'Roboto Slab', serif;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+/* Header et contenu du header */
+
+header {
+    background-color: #aa7b51;
+    color: white;
+}
+header > nav {
+    display: flex;
+    align-items: end;
+}
+header > nav > a {
+    padding: 0px 12.5px;
+    margin-block-start: 0.75em;
+    margin-block-end: 0.75em;
+}
+.client * {
+    font-size: 3.5vw;
+    font-weight: 400;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+}
+.croix {
+    padding: 5px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 5vw;
+}
+.rdv > a {
+    font-size: 3.25vw;
+}
+header > :nth-child(2) {
+    background-color: #553019;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+header > :nth-child(2) > :nth-child(n) {
+    margin: 0px 5px;
+}
+.panier {
+    display: flex;
+    align-items: center;
+}
+.panier > img {
+    height: 3vh;
+    width: auto;
+    margin-right: 8px;
+}
+
+/* // Main // */
+
+/* Première partie */
+
+.logo {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
+.logo > img, article > img {
+    height: auto;
+    width: 90%;
+}
+.menu {
+    background-color: #aa7b51;
+    color: white;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.menu > img {
+    height: 25px;
+    width: auto;
+    position: absolute;
+    top: 28%;
+    right: 5%;
+}
+.menu > ul, .jsmenu > ul {
+    list-style-type: none;
+    display: flex;
+    padding-inline-start: 0px;
+}
+.menu li {
+    margin: 0px 30px;
+    font-size: 5vw;
+}
+.menu > h4 {
+    font-weight: 400;
+}
+.jsmenu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color:#aa7b51;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    transition: 0.3s;
+    z-index: 99;
+}
+.jsmenu > ul {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+}
+.jsmenu > ul > li {
+    font-size: 6vw;
+    padding: 10px;
+}
+.jsmenu svg {
+    transition: 0.3s;
+}
+
+.jshide {
+    transform: translateY(100%);
+}
+a {
+    color: white;
+    text-decoration: none;
+}
+a:active {
+    color: white;
+}
+
+/* Définition du style des balises articles qui serviront dans la première et troisième partie du site */
+
+article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 35px 10px;
+}
+article > h2 {
+    margin-block-start: 0.75em;
+    margin-block-end: 1.25em;
+    font-size: 4.5vw;
+}
+.decale {
+    margin-right: 20px;
+}
+hr {
+    width: 90vw;
+    background-color: rgba(128, 128, 128, 0.20);
+    border: none;
+    height: 0.1px;
+}
+
+/* Deuxième partie */
+
+.deux {
+    text-align: center;
+}
+.exception > :nth-child(1) {
+    font-size: 11.5vw;
+    margin-block-end: 0vh;
+    max-height: 45px;
+}
+.exception > :nth-child(2) {
+    font-size: 14vw;
+    margin-block-start: 0em;
+    color: #aa7b51;
+    max-height: 45px;
+}
+.texte > p {
+    font-size: 3.85vw;
+    padding: 0px 20px;
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+    font-family: 'Open Sans', sans-serif;
+}
+.texte > :nth-child(1) {
+    margin-block-start: 3.5em;
+    margin-block-end: 1em;
+}
+button {
+    margin: 35px 12px;
+    padding: 7.5px 30px;
+    border: none;
+    background-color: #aa7b51;
+    color: white;
+    font-size: 6vw;
+    font-weight: 900;
+    font-family: 'Roboto Slab', serif;
+    position: relative;
+    overflow: hidden;
+}
+button > p {
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+}
+button img {
+    width: 20%;
+    height: auto;
+    position: absolute;
+    right: 40%;
+    top: 10%;
+    opacity: 0;
+}
+
+/* Footer et contenu */
+
+footer {
+    background-color: #aa7b51;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+footer > ul {
+    list-style-type: none;
+    text-align: center;
+    padding-inline-start: 0;
+}
+.footermenu {
+    margin-block-start: 1.5em;
+    margin-block-end: 0em;
+}
+.footermenu > :nth-child(4) {
+    padding-bottom: 0px;
+}
+.footermenu2 {
+    margin-block-start: 0em;
+    margin-block-end: 1.5em;
+}
+.footermenu2 > :nth-child(1) {
+    padding-top: 0px;
+}
+.footermenu2 > * {
+    font-size: 3.5vw;
+    font-weight: 400; 
+}
+footer > ul > li {
+    margin: 10px;
+    padding: 5px;
+    font-size: 5vw;
+}
+
+/* Les éléments cachés de la version mobile */
+
+.mobilehide {
+    display: none;
+}
+
+/* Animations */
+
+header > nav > *:hover {
+    opacity: 0.5;
+}
+header > nav a:hover {
+    color: white;
+}
+li, a, header > nav > *, button, button p, img {
+    transition: 0.3s;
+}
+button, button img {
+    transition: 0.4s;
+}
+li:hover, a:hover {
+    color: #553019;
+}
+.prem_cafe img:hover, .trois img:hover{
+    filter: contrast(120%);
+    transform: scale(1.05);
+}
+button:hover {
+    background-color: #553019;
+}
+button:hover p {
+    opacity: 0;
+}
+button:hover img {
+    opacity: 1;
+}
+.jsmenu svg:hover {
+    transform: rotate(180deg);
+    stroke: #553019;
+}
+
+/* Version ordinateur */
+
+@media screen and (min-width : 800px)
+{
+    /* Initialisation du body */
+
+    body {
+        background-color: #c7b299;
+    }
+
+    /* Header et contenu du header */
+
+    header {
+        display: flex;
+        background-color: #553019;
+        align-items: center;
+        justify-content: space-evenly;
+        
+    }
+    header * {
+        font-size: 0.7vw!important;
+    }
+    header a {
+        margin-block-start: 0em;
+        margin-block-end: 0em;
+    }
+    .rdv > a {
+        margin-block-start: 1em;
+        margin-block-end: 1em;
+    }
+    .client * {
+        margin-block-start: 0em;
+        margin-block-end: 0em;
+    }
+    .panier > img {
+        height: 3vh;
+    }
+
+    /* // Main // */
+
+    main {
+        background-color: white;
+        width: 66vw;
+        margin-left: 17vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* Première partie */
+
+    .logo > img {
+        width: auto;
+        height: 25vh;
+        margin: 10px;
+    }
+    .menu > ul {
+        padding-inline-end: 45px;
+    }
+    .menu li {
+        font-size: 1.25vw;
+    }
+    .prem_cafe {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 25px 10px 0px 10px;
+    }
+    .prem_cafe > article {
+        width: 50%;
+        margin: 35px 10px 0px 10px;
+    }
+    article > h2 {
+        margin-block-start: 0.25em;
+        margin-block-end: 0em;
+        font-size: 1.5vw;
+    }
+    .prem_cafe > article > img {
+        width: 95%;
+        height: auto;
+    }
+
+    /* Deuxième partie */
+
+    .deux {
+        display: flex;
+        align-items: center;
+    }
+    .deux > :nth-child(n) {
+        width: 50%;
+    }
+    .exception > * {
+        width: 100%;
+    }
+    hr {
+        width: 61vw; 
+    }
+    .exception > :nth-child(1) {
+        font-size: 3.5vw;
+        margin-block-start: 0em;
+    }
+    .exception > :nth-child(2) {
+        font-size: 4.25vw;
+        margin-block-start: 0.25em;
+        margin-block-end: 1.1em;
+    }
+    .texte {
+        text-align: left;
+    }
+    .texte > p  {
+        font-size: 0.85vw;
+        padding: 0px 20px 0px 12px;
+        margin-block-start: 1em!important;
+        margin-block-end: 0em!important;
+    }
+    .texte > :nth-child(3) {
+        margin-block-start: 0em!important;
+    }
+    button {
+        margin: 25px 12px;
+        padding: 4.5px 20px;
+        font-size: 1.15vw;
+    }
+
+    /* Troisième partie */
+
+    .trois {
+        display: flex;
+    }
+    .trois > article {
+        width: 33%;
+        margin: 20px 10px 35px 10px;
+    }
+    .trois > article > h2 {
+        margin-block-start: 0.75em;
+        font-size: 1.15vw;
+    }
+
+    /* Footer et contenu */
+    
+    footer > ul {
+        display: flex;
+    }
+    .footermenu > li {
+        padding: 0px 15px;
+        margin-right: 50px;
+        font-size: 1.25vw;
+    }
+   .footermenu2 {
+        align-items: baseline;
+   }
+   .footermenu2 > li {
+    font-size: 0.85vw;
+    margin: 25px 30px;
+   }
+   .jsmenu > ul > li {
+    font-size: 3vw;
+    padding: 25px;
+    }
+
+    /* Disparition d'éléments de la version mobile et apparition d'éléments pour la version ordinateur */
+
+    .mobilehide {
+        display: flex;
+    }
+    .computerhide {
+        display: none;
+    }
+}
