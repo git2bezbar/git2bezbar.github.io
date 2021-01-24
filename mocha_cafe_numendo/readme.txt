@@ -6,9 +6,13 @@ Quelques indications sur ma manière de procéder :
             - une optimisation des images pour les alléger en gardant la meilleure qualité possible
             - une conversion des images au format 'webp' afin d'alléger davantage chaque image
             - une utilisation du lazy loading
+            - une indication des attributs height et width dans le fichier html de chaque image
+            - un attribut src qui renvoie vers une image au format .jpg ou .png
     Dans le but de gagner en performance et réduire les temps de chargement de chaque image.
     Le format 'webp' est développé par Google et offre un taux de compression intéressant pour le web.
     Le lazy loading permet d'éviter de charger des images qui n'apparaissent pas dans le viewport, on gagne ainsi en performance.
+    Pour que le navigateur conaissent le ratio de chaque image avant de la charger.
+    Si l'utilisateur utilise un navigateur qui ne supporte pas le .webp il aura toujours une image avec un format lisible
 
     La maquette : 
         J'ai privilégié :
@@ -29,6 +33,9 @@ Quelques indications sur ma manière de procéder :
     
     En dehors de la page web (description, icône, liens) :
 
-        J'ai utilisé un renvoi vers la page "blank.html" et utilisé des informations supplémentaires comme le titre, la description et l'icône afin de rendre le site plus authentique et d'améliorer l'expérience utilisateur.
+        J'ai utilisé un renvoi vers la page "blank.html" et utilisé des informations supplémentaires comme le titre, la description et l'icône
+        afin de rendre le site plus authentique et d'améliorer l'expérience utilisateur.
+
+
 
     
