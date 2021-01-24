@@ -3,14 +3,17 @@
 @font-face {
     font-family: 'Open Sans';
     src: url("/fonts/open_sans/OpenSans-Regular.ttf") format("truetype");
+    font-display: swap;
 }
 @font-face {
     font-family: 'Roboto Slab';
     src: url("/fonts/roboto_slab/RobotoSlab-Regular.ttf") format("truetype");
+    font-display: swap;
 }
 @font-face {
     font-family: 'Roboto Slab';
     src: url("/fonts/roboto_slab/RobotoSlab-Bold.ttf") format("truetype");
+    font-display: swap;
     font-weight: bold;
     font-style: normal;
 }
