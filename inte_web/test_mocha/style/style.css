@@ -1,5 +1,16 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&display=swap');
+@font-face {
+    font-family: 'Open Sans';
+    src: url("/fonts/open_sans/OpenSans-Regular.ttf") format("truetype");
+}
+@font-face {
+    font-family: 'Roboto Slab';
+    src: url("/fonts/roboto_slab/RobotoSlab-Regular.ttf") format("truetype");
+}
+@font-face {
+    font-family: 'Roboto Slab';
+    src: url("/fonts/roboto_slab/RobotoSlab-Bold.ttf") format("truetype");
+    font-weight: bold;
+}
 
 html {
     scroll-behavior: smooth;
