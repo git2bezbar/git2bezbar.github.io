@@ -2,17 +2,17 @@
 
 @font-face {
     font-family: 'Open Sans';
-    src: url("/fonts/open_sans/OpenSans-Regular.ttf") format("truetype");
+    src: url("../fonts/open_sans/OpenSans-Regular.ttf") format("truetype");
     font-display: swap;
 }
 @font-face {
     font-family: 'Roboto Slab';
-    src: url("/fonts/roboto_slab/RobotoSlab-Regular.ttf") format("truetype");
+    src: url("../fonts/roboto_slab/RobotoSlab-Regular.ttf") format("truetype");
     font-display: swap;
 }
 @font-face {
     font-family: 'Roboto Slab';
-    src: url("/fonts/roboto_slab/RobotoSlab-Bold.ttf") format("truetype");
+    src: url("../fonts/roboto_slab/RobotoSlab-Bold.ttf") format("truetype");
     font-display: swap;
     font-weight: bold;
     font-style: normal;
@@ -44,7 +44,7 @@ header > nav {
     display: flex;
     align-items: end;
 }
-header > nav > h6 {
+header > nav > a {
     padding: 0px 12.5px;
     margin-block-start: 0.75em;
     margin-block-end: 0.75em;
@@ -60,7 +60,7 @@ header > nav > h6 {
     font-family: 'Open Sans', sans-serif;
     font-size: 5vw;
 }
-.rdv > h6 {
+.rdv > a {
     font-size: 3.25vw;
 }
 header > :nth-child(2) {
@@ -287,11 +287,13 @@ footer > ul > li {
 
 /* Animations */
 
-header h6:hover, header img:hover {
+header > nav > *:hover {
     opacity: 0.5;
 }
-
-li, a, header h6, button, button p, img {
+header > nav a:hover {
+    color: white;
+}
+li, a, header > nav > *, button, button p, img {
     transition: 0.3s;
 }
 button, button img {
@@ -340,11 +342,11 @@ button:hover img {
     header * {
         font-size: 0.7vw!important;
     }
-    header h6 {
+    header a {
         margin-block-start: 0em;
         margin-block-end: 0em;
     }
-    .rdv > h6 {
+    .rdv > a {
         margin-block-start: 1em;
         margin-block-end: 1em;
     }
