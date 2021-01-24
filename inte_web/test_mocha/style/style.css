@@ -1,3 +1,15 @@
+@font-face {
+    font-family: "Open Sans";
+    src: url("/fonts/open_sans/OpenSans-Regular.ttf") format("ttf");
+}
+@font-face {
+    font-family: "Roboto Slab";
+    src: url("/fonts/roboto_slab/RobotoSlab-Regular.ttf") format("ttf"),
+        url("fonts/roboto_slab/RobotoSlab-Bold.ttf") format("ttf");
+}
+
+
+
 html {
     scroll-behavior: smooth;
 }
