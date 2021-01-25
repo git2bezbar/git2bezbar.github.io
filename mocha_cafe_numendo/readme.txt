@@ -12,7 +12,7 @@ Quelques indications sur ma manière de procéder :
     Le format 'webp' est développé par Google et offre un taux de compression intéressant pour le web.
     Le lazy loading permet d'éviter de charger des images qui n'apparaissent pas dans le viewport, on gagne ainsi en performance.
     Pour que le navigateur conaissent le ratio de chaque image avant de la charger.
-    Si l'utilisateur utilise un navigateur qui ne supporte pas le .webp il aura toujours une image avec un format lisible
+    Si l'utilisateur utilise un navigateur qui ne supporte pas le .webp il aura toujours une image avec un format lisible.
 
     La maquette : 
         J'ai privilégié :
