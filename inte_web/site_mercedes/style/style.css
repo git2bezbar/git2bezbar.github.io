@@ -23,20 +23,43 @@ header > svg {
     margin-left: auto;
     margin-right: 20px;
 }
-ul {
-    display: flex;
-    justify-content: space-around;
+.rs > ul, .footer1 {
+    display: grid;
+   grid-template-columns: 1fr 1fr;
+   grid-template-rows: 1fr 1fr 1fr;
+    /* justify-content: center; */
+    align-items: center;
     list-style-type: none;
     color: grey;
+    padding-inline-start: 0;
+}
+.bas {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+     /* justify-content: center; */
+     align-items: center;
+     list-style-type: none;
+     color: grey;
+     padding-inline-start: 0; 
+     border-top: 2px solid grey;
+     padding-top: 20px;
 }
 ul > li {
     transition: 0.4s;
+    padding: 5px;
 }
 ul > li:hover {
     color: white;
 }
 h1, h2 {
     font-weight: 300;
+}
+h1 {
+    font-size: 5vw;
+}
+.menu {
+    display: none;
 }
 main {
     margin-top: 25px;
