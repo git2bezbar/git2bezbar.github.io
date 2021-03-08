@@ -33,7 +33,7 @@ const blue = document.querySelector(".blue");
 const red = document.querySelector(".red");
 
 window.addEventListener('deviceorientation', function (e) {
-    green.style.transform = "translateX(" + e.alpha + "px) translateY(" + e.beta + "px)";
-    blue.style.transform = "translateX(" + e.alpha * 0.5 + "px) translateY(" + e.beta * 0.5 + "px)";
-    red.style.transform = "translateX(" + e.alpha * 0.25 + "px) translateY(" + e.beta * 0.25 + "px)";
+    green.style.transform = "translateX(" + (e.alpha % 180) + "px) translateY(" + (e.beta % 180) + "px)";
+    blue.style.transform = "translateX(" + (e.alpha % 180) * 0.5 + "px) translateY(" + (e.beta % 180) * 0.5 + "px)";
+    red.style.transform = "translateX(" + (e.alpha % 180) * 0.25 + "px) translateY(" + (e.beta % 180) * 0.25 + "px)";
 });
