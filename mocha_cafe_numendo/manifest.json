@@ -6,7 +6,7 @@
   "display": "standalone",
   "orientation": "portrait",
   "scope": "/",
-  "start_url": "/mocha_cafe_numendo",
+  "start_url": "/mocha_cafe_numendo/",
   "icons": [
     {
       "src": "img/icon.png",
