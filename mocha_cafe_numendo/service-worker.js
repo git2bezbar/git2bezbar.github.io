@@ -6,7 +6,7 @@ self.addEventListener("install", function (event) {
         caches.open(version + 'fundamentals')
             .then(function (cache) {
                 return cache.addAll([
-                    '/',
+                    '/mocha_cafe_numendo',
                     'index.html',
                     'manifest.json'
                 ]);
