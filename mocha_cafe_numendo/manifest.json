@@ -1,0 +1,10 @@
+{
+  "name": "Mocha Café - Le meilleur du café",
+  "short_name": "Mocha Café",
+  "theme_color": "#c7b299",
+  "background_color": "#aa7b51",
+  "display": "browser",
+  "orientation": "portrait",
+  "scope": "/",
+  "start_url": "/"
+}
