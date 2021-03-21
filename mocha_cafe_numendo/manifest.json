@@ -3,7 +3,7 @@
   "short_name": "Mocha Café",
   "theme_color": "#c7b299",
   "background_color": "#aa7b51",
-  "display": "browser",
+  "display": "standalone",
   "orientation": "portrait",
   "scope": "/",
   "start_url": "/"
