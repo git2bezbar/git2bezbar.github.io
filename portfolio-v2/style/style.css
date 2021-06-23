@@ -1,0 +1,96 @@
+body {
+    margin: 0;
+    background-color: #161616;
+    color: #eeeeee;
+    font-family: lust, serif;
+}
+.main-container {
+    position: relative;
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 50px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+header > span {
+    font-size: 1.3em;
+}
+.landing {
+    width: 100vw;
+    max-width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.deco {
+    font-size: 7.5em;
+    position: absolute;
+    z-index: -99;
+    white-space: nowrap;
+    left: 0;
+    color: #161616;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: #313131;
+}
+.first {
+    top: 15%;
+}
+.last {
+    bottom: 15%;
+}
+.titre > h1 {
+    font-size: 6em;    
+    margin-block-end: 0em;
+}
+.titre > h4 {
+    font-size: 2em;
+    text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif;
+    margin-block-start: 1em;
+}
+.scroll {
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.scroll > :nth-child(1) {
+    font-size: 1em;
+    text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif;
+    margin: 15px;
+}
+.scroll > :nth-child(2) {
+    background-color: #eeeeee;
+    width: 3px;
+    height: 75px;
+    animation: scroll-bar 2s infinite cubic-bezier(0.9,0,0,.9);
+}
+@keyframes scroll-bar {
+    0% {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+    33% {
+        clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0 100%);
+    }
+    66% {
+        clip-path: polygon(0 0, 100% 0, 100% 0%, 0 0%);
+    }
+    100% {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+}
