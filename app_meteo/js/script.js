@@ -6,7 +6,7 @@ function main() {
             const ip = json.ip;
             console.log(ip);
 
-            fetch('http://freegeoip.net/json/' + ip)
+            /* fetch('http://freegeoip.net/json/' + ip)
                 .then(resultat => resultat.json())
                 .then(json => {
                     const ville = json.city;
@@ -16,7 +16,7 @@ function main() {
                         .then(json => {
                             console.log(json);
                         })
-                })
+                }) */
         })
 }
 
