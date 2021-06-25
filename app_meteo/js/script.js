@@ -11,7 +11,7 @@ function main() {
                 .then(json => {
                     const ville = json.city;
 
-                    fetch('http://api.openweathermap.org/data/2.5/weather?q=' + ville)
+                    fetch('http://api.openweathermap.org/data/2.5/weather?q=' + ville + '&appid=4a337615020c6ec12925a53f61106167&lang=fr&units=metric')
                         .then(resultat => resultat.json())
                         .then(json => {
                             console.log(json);
