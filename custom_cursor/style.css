@@ -1,0 +1,44 @@
+body {
+    margin: 0;
+    height: 100vh;
+    width: 100vw;
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #A084D9;
+    cursor: none;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.cursor {
+    position: absolute;
+    height: 2vw;
+    width: 2vw;
+    border: #20294A 2.5px solid;
+    border-radius: 100%;
+    transform: translate(-50%, -50%);
+    transition: 0.2s ease;
+    pointer-events: none;
+}
+
+.cursor_animation {
+    animation: cursor 0.25s infinite alternate;
+}
+
+a {
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #20294A;
+    font-weight: bolder;
+}
+
+@keyframes cursor {
+    from {
+        transform: translate(-50%, -50%) scale(1.15);
+        opacity: 1;
+    }
+    to {
+        transform:translate(-50%, -50%) scale(1);
+        opacity: 0.75;
+    }
+}
