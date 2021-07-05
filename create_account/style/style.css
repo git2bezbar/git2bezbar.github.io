@@ -1,0 +1,126 @@
+body {
+    padding: 0;
+    margin: 0;
+    width: 95vw;
+    height: 95vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #01194a;
+    font-family: 'Poppins', sans-serif;
+}
+section {
+    background-color: #01112d;
+    height: 650px;
+    width : 500px;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    position: relative;
+}
+form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas: 
+    "label ."
+    "pseudo pseudo"
+    "prenom nom"
+    "num mail"
+    "mdp mdp"
+    "bouton bouton";
+    align-items: center;
+}
+form > :nth-child(1) {
+    grid-area: label;
+    margin: 0px 12.5px;
+    justify-self: flex-start;
+    align-self: flex-end;
+}
+form > :nth-child(2) {
+    grid-area: pseudo;
+}
+form > :nth-child(3) {
+    grid-area: prenom;
+}
+form > :nth-child(4) {
+    grid-area: nom;
+}
+form > :nth-child(5) {
+    grid-area: num;
+}
+form > :nth-child(6) {
+    grid-area: mail;
+}
+form > :nth-child(7) {
+    grid-area: mdp;
+}
+form > :nth-child(8) {
+    grid-area: bouton;
+    background: linear-gradient(-90deg, #0ccae1, #3861fa);
+    border: none;
+    font-family: 'Poppins', sans-serif;
+    border-radius: 5px;
+    padding: 10px 20px;
+    margin: 10px;
+    color: white;
+    font-weight: bold;
+    font-size: 1.1em;
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+}
+input {
+    background-color: #01194a;
+    border: none;
+    font-family: 'Poppins', sans-serif;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px;
+    color: white;
+}
+input::placeholder {
+    font-weight: 500;
+}
+a {
+    color: #335faa;
+}
+h1 {
+    font-size: 2em;
+}
+.petit {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100px;
+    width: 100px;
+    border-radius: 100%;
+    transform: translate(50px, -25px);
+    background: linear-gradient(45deg, rgba(65,47,255,1) 0%, rgba(156,34,237,1) 100%);
+}
+.moyen {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    height: 300px;
+    width: 300px;
+    border-radius: 100%;
+    transform: translate(50%, 25%);
+    background: linear-gradient(45deg, rgba(65,47,255,1) 0%, rgba(156,34,237,1) 100%);
+    z-index: -99;
+}
+.grand {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 500px;
+    width: 500px;
+    border-radius: 100%;
+    transform: translate(-50%, -10%);
+    background: linear-gradient(45deg, rgba(65,47,255,1) 0%, rgba(156,34,237,1) 100%);
+    z-index: -99;
+}
