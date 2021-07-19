@@ -42,6 +42,12 @@ textarea{
     background-color: rgb(25, 25, 25);
     border: rgb(75, 75, 75) 2px solid;
 }
+@media screen and (max-width : 800px)
+{
+    textarea {
+        width: 80vw;
+    }
+}
 .texte{
     color: rgb(238, 138, 72);
     transition: 0.5s;
