@@ -1,5 +1,4 @@
 body{
-
     min-height: 100vh;
     background-color: rgb(216, 216, 216);
     display: flex;
@@ -66,8 +65,8 @@ body{
 /* Paysage */
 
 .paysage{
-    height: 500px;
-    width: 500px;
+    height: 300px;
+    width: 300px;
     border-radius: 100%;
     border: 5px solid grey;
     margin-top: 50px;
@@ -86,22 +85,22 @@ body{
     transition: 0.3s;
 }
 .soleil{
-    height: 150px;
-    width: 150px;
+    height: 100px;
+    width: 100px;
     border-radius: 100%;
     position: absolute;
-    top: 275px;
-    left: 175px;
+    top: 180px;
+    left: 105px;
     background: #F2EF88;
     box-shadow: 0 0 20px rgba(242, 239, 136, 0.4);
 }
 .lune{
-    height: 150px;
-    width: 150px;
+    height: 100px;
+    width: 100px;
     border-radius: 100%;
     position: absolute;
-    top: 75px;
-    left: 500px;
+    top: -25px;
+    left: 435px;
     background: #e9e9e9;
     box-shadow: 0 0 20px rgba(204, 204, 196, 0.4);
 }
