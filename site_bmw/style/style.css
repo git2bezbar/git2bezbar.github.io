@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Syncopate:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #000000;
+    color: #ffffff;
+    font-family: 'Poppins', sans-serif;
+}
+svg {
+    position:  absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.1);
+    z-index: 1;
+    transform-origin: center;
+}
+
+main {
+    position: relative;
+    width: 100vw;
+    max-width: 100%;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    overflow: hidden;
+}
+.left {
+    background: linear-gradient(transparent, rgb(0, 0, 0)), url("../img/bmw.jpg");
+    background-position: center;
+    background-size:cover;
+    text-align: center;
+    display: flex;
+    flex-direction: column-reverse;
+}
+.right {
+    background: linear-gradient(0deg, rgb(0, 0, 0), transparent ), url("../img/bmw.jpg");
+    background-position: right center;
+    background-size: 200%;
+    text-align: right;
+}
+.trait {
+    background-color: rgb(197, 197, 197);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 49.85%;
+    right: 49.85%;
+}
+.text {
+    margin-bottom: 75px;
+}
+h1 {
+    font-family: 'Syncopate', sans-serif;
+    overflow: hidden;
+    font-size: 48px;
+}
+h1 > span {
+    transform-origin: center top;
+    display: inline-block;
+}
+.left p {
+    font-size: 16px;
+    padding: 0px 100px;
+    text-align: justify;
+    font-weight: 200;
+}
+.right p {
+    font-size: 16px;
+    font-weight: 300;
+    text-transform: uppercase;
+    margin-block-start: 0.25em;
+    margin-block-end: 1.75em;
+}
+.right h1 {
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+}
+.right > div {
+    margin: 75px 75px;
+}
+.load {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -100%);
+    z-index: 99;
+    text-transform: uppercase;
+    font-size: 48px;
+}
