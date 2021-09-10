@@ -19,11 +19,11 @@ async function main(withip = true) {
 
     if (withip) {
 
-        const ip = await fetch('https://api.ipify.org?format=json')
+        const ip = await fetch('//api.ipify.org?format=json')
             .then(resultat => resultat.json())
             .then(json => json.ip);
 
-        ville = await fetch(`http://api.ipstack.com/${ip}?access_key=a26497cc19d6246015585e7431d6b66d`)
+        ville = await fetch(`//api.ipstack.com/${ip}?access_key=a26497cc19d6246015585e7431d6b66d`)
             .then(resultat => resultat.json())
             .then(json => json.city);
 
@@ -32,7 +32,7 @@ async function main(withip = true) {
         ville = document.querySelector("#ville").textContent;
     }
 
-    const meteo = await fetch(`http://api.openweathermap.org/data/2.5/weather?q=${ville}&appid=4a337615020c6ec12925a53f61106167&lang=fr&units=metric`)
+    const meteo = await fetch(`//api.openweathermap.org/data/2.5/weather?q=${ville}&appid=4a337615020c6ec12925a53f61106167&lang=fr&units=metric`)
         .then(resultat => resultat.json())
         .then(json => json);
 
