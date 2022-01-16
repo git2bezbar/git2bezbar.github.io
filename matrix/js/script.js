@@ -1,9 +1,12 @@
+// ---------- Background animation ---------- //
+
 class MatrixAnimation {
 
     /**
      * 
      * @param {object} element Element qui va contenir l'animation
      * @param {string} lettersColor Couleur des lettres
+     * @param {string} shadowColor Ombre des lettres
      * @param {number} letterSize Taille des lettres
      * @param {*} font Police
      * @param {*} speed Vitesse d'animation
@@ -75,8 +78,7 @@ class MatrixAnimation {
         this.status = this.status ? false : true;
     }
 }
-
-const matrix = new MatrixAnimation(document.querySelector('#matrix'), '#03fc35', 10, 'Noto Sans JP', 48);
+const matrix = new MatrixAnimation(document.querySelector('#matrix'), '#00ff6a', 10, 'Noto Sans JP', 48);
 
 matrix.init();
 
@@ -86,4 +88,31 @@ window.addEventListener('resize', () => {
 
 window.addEventListener('click', () => {
     matrix.pausePlay();
+});
+
+// ---------- SVG morphing ---------- //
+
+const openedEyePath = "M2.32999 35.42C2.32999  35.42  18.99   2.09   48.16  2.09   C 77.33  2.09   93.99   35.42  93.99   35.42  C 93.99   35.42  77.33   68.75  48.16  68.75  C 18.99   68.75  2.32999 35.42  2.32999 35.42Z";
+const closedEyePath = "M4.04584 35.415C4.04584 35.415 20.1329 35.415 48.165 35.415 C 76.197 35.415 92.2841 35.415 92.2841 35.415 C 92.2841 35.415 76.2933 35.415 48.165 35.415 C 20.0366 35.415 4.04584 35.415 4.04584 35.415Z";
+
+let toggle = false;
+
+const timeline = anime.timeline({
+    duration: 300,
+    easing: "easeInOutSine"
+});
+
+window.addEventListener('click', () => {
+
+    timeline.add({
+        targets: ".eye-first",
+        d: { value: toggle ? openedEyePath : closedEyePath }
+    }).add({
+        targets: ".eye-last",
+        scale: { value: toggle ? 1 : 0 }
+    });
+
+    console.log();
+
+    toggle = toggle ? false : true;
 });
