@@ -96,23 +96,59 @@ const openedEyePath = "M2.32999 35.42C2.32999  35.42  18.99   2.09   48.16  2.09
 const closedEyePath = "M4.04584 35.415C4.04584 35.415 20.1329 35.415 48.165 35.415 C 76.197 35.415 92.2841 35.415 92.2841 35.415 C 92.2841 35.415 76.2933 35.415 48.165 35.415 C 20.0366 35.415 4.04584 35.415 4.04584 35.415Z";
 
 let toggle = false;
+let is_animating = false;
 
-const timeline = anime.timeline({
+const tl1 = anime.timeline({
+    duration: 300,
+    easing: "easeInOutSine"
+});
+const tl2 = anime.timeline({
     duration: 300,
     easing: "easeInOutSine"
 });
 
-window.addEventListener('click', () => {
+function openEye() {
 
-    timeline.add({
+    is_animating = true;
+
+    tl1.add({
         targets: ".eye-first",
-        d: { value: toggle ? openedEyePath : closedEyePath }
+        d: { value: openedEyePath }
     }).add({
         targets: ".eye-last",
-        scale: { value: toggle ? 1 : 0 }
+        scale: { value: 1 }
     });
 
-    console.log();
+    toggle = false;
+}
 
-    toggle = toggle ? false : true;
+function closeEye() {
+
+    is_animating = true;
+
+    tl2.add({
+        targets: ".eye-first",
+        d: { value: closedEyePath }
+    }).add({
+        targets: ".eye-last",
+        scale: { value: 0 }
+    });
+
+    toggle = true;
+}
+
+window.addEventListener('click', () => {
+
+    console.log(toggle);
+    console.log(is_animating);
+
+    if (!is_animating) {
+
+        if (toggle) {
+            openEye();
+        } else {
+            is_animating = true;
+            closeEye();
+        }
+    }
 });
