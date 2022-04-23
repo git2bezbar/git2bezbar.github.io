@@ -78,7 +78,7 @@ tl.from("#logo", { duration: 1, opacity: 0, transform: "translateX(-100px)", eas
 tl.from("#hamburger", { duration: 1, opacity: 0, transform: "translateX(100px)", ease: "power2" }, "-=1");
 tl.from(".trait", { duration: 1, scaleY: 0, ease: "power2" });
 tl.from(".cercles", { duration: 1, opacity: 0, transform: "translateX(100px)", stagger: 0.1, ease: "power2" });
-tl.from("li > span", { duration: 1, opacity: 0, transform: "translateX(100px)", stagger: 0.1, ease: "power2" });
+tl.from("li > a", { duration: 1, opacity: 0, transform: "translateX(100px)", stagger: 0.1, ease: "power2" });
 tl.from(".infos > *", { duration: 1, opacity: 0, transform: "translateY(100px)", stagger: 0.5, ease: "power2" }, "-=0.5");
 tl.from("section > img", { duration: 1, opacity: 0, transform: "translateY(100px)", stagger: 0.5, ease: "power2" }, "-=1.2")
 tl.from("aside > div", { duration: 1, opacity: 0, transform: "translateX(100px)", stagger: 0.1, ease: "power2" }, "-=0.5");
@@ -88,26 +88,26 @@ tl.delay(0.5);
 document.querySelectorAll("li").forEach(element => {
 
     /* element.addEventListener("mouseenter", function () {
-        document.querySelectorAll("li span").forEach(ele => {
+        document.querySelectorAll("li a").forEach(ele => {
             ele.classList.add("erase");
         });
-        this.querySelector("span").classList.remove("erase");
-        this.querySelector("span").classList.add("emphasis");
+        this.querySelector("a").classList.remove("erase");
+        this.querySelector("a").classList.add("emphasis");
     });
 
     element.addEventListener("mouseleave", function () {
-        this.querySelector("span").classList.remove("emphasis");
-        document.querySelectorAll("li span").forEach(ele => {
+        this.querySelector("a").classList.remove("emphasis");
+        document.querySelectorAll("li a").forEach(ele => {
             ele.classList.remove("erase");
         });
     }); */
 
     element.addEventListener("click", function () {
-        document.querySelectorAll("li span").forEach(ele => {
+        document.querySelectorAll("li a").forEach(ele => {
             ele.classList.add("erase");
         });
-        this.querySelector("span").classList.remove("erase");
-        this.querySelector("span").classList.add("emphasis");
+        this.querySelector("a").classList.remove("erase");
+        this.querySelector("a").classList.add("emphasis");
         document.querySelectorAll(".cercles").forEach(skusku => {
             skusku.classList.remove("active_circle");
         });
