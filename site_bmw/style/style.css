@@ -7,6 +7,7 @@ body {
     background-color: #000000;
     color: #ffffff;
     font-family: 'Poppins', sans-serif;
+    height: 100vh;
 }
 svg {
     position:  absolute;
@@ -23,19 +24,19 @@ main {
     max-width: 100%;
     height: 100vh;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 50vh 50vh;
     overflow: hidden;
 }
 .left {
-    background: linear-gradient(transparent, rgb(0, 0, 0)), url("../img/bmw.jpg");
+    background: linear-gradient(transparent, #000000e6 50%), url("../img/bmw.jpg");
     background-position: center;
     background-size:cover;
-    text-align: center;
+    text-align: left;
     display: flex;
     flex-direction: column-reverse;
 }
 .right {
-    background: linear-gradient(0deg, rgb(0, 0, 0), transparent ), url("../img/bmw.jpg");
+    background: linear-gradient(180deg, #000000E6 50%, transparent ), url("../img/bmw.jpg");
     background-position: right center;
     background-size: 200%;
     text-align: right;
@@ -45,40 +46,48 @@ main {
     position: absolute;
     top: 0;
     bottom: 0;
-    left: 49.85%;
-    right: 49.85%;
+    left: 50%;
+    width: 5px;
+    transform: translate(-50%);
+    display: none;
 }
 .text {
     margin-bottom: 75px;
 }
-h1 {
+h1, h2 {
     font-family: 'Syncopate', sans-serif;
-    overflow: hidden;
-    font-size: 48px;
 }
-h1 > span {
+h2 {
+    overflow: hidden;
+    font-size: 32px;
+}
+h2 > span {
     transform-origin: center top;
     display: inline-block;
 }
+.left h2 {
+    margin-bottom: 16px;
+    padding-left: 50px;
+}
 .left p {
-    font-size: 16px;
-    padding: 0px 100px;
-    text-align: justify;
+    font-size: 12px;
+    padding: 0px 50px;
     font-weight: 200;
+    line-height: 1.25;
 }
 .right p {
-    font-size: 16px;
+    font-size: 12px;
     font-weight: 300;
     text-transform: uppercase;
-    margin-block-start: 0.25em;
-    margin-block-end: 1.75em;
+    margin-block-start: 0em;
+    margin-block-end: 1em;
 }
-.right h1 {
+.right h2 {
     margin-block-start: 0em;
     margin-block-end: 0em;
 }
 .right > div {
-    margin: 75px 75px;
+    margin: 75px 50px;
 }
 .load {
     position: absolute;
@@ -87,5 +96,48 @@ h1 > span {
     transform: translate(-50%, -100%);
     z-index: 99;
     text-transform: uppercase;
-    font-size: 48px;
+    min-width: 225px;
+    font-size: 24px;
+    text-align: center;
+}
+
+@media screen and (min-width:768px) {
+    .load {
+        font-size: 48px;
+    }
+}
+
+@media screen and (min-width:1024px) {
+    main {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr;
+    }
+    h2 {
+        font-size: 48px;
+    }
+    .trait {
+        display: block;
+    }
+    .left p {
+        padding: 0px 100px;
+        font-size: 16px;
+    }
+    .left h2 {
+        padding-left: 100px;
+    }
+    .right {
+        background: linear-gradient(180deg, #000000E6 50%, transparent ), url("../img/bmw.jpg");
+        background-position: right center;
+        background-size: 200%;
+    }
+    .right p {
+        font-size: 16px;
+        font-weight: 300;
+        text-transform: uppercase;
+        margin-block-start: 0.25em;
+        margin-block-end: 1.75em;
+    }
+    .right > div {
+        margin: 75px;
+    }
 }
